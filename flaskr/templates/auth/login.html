@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <form action="/login" method="post">
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>
+        {% block title %}Log In{% endblock %}
+    </h1>
+{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
         <label for="username">Username</label>
-        <input type="text" name="username" id="1">
+        <input name="username" id="username" type="text" required>
         <label for="password">Password</label>
-        <input type="password" name="password" id="2">
-        <input type="submit" value="Enviar">
+        <input type="password" name="password" id="password" required>
+        <input type="submit" value="Register">
     </form>
-</body>
-</html>
+{% endblock %}
