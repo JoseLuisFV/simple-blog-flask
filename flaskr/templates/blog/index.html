@@ -22,7 +22,7 @@
                 {% endif %}
             </header>
             <p class="body">
-                {{ post['body'] }}
+                {{ post['body'] |safe }}
             </p>
         </article>
         {% if not loop.last %}
